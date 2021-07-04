@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +23,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/test', function(){
     return "Test API response...";
 });
+
+Route::resource('posts', PostController::class);
